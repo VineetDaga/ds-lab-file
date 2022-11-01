@@ -69,8 +69,9 @@ int dequeue(struct QUEUE *Q)
     }
     else
     {
-        Q->front = Q->front + 1;
+        
         int data = Q->ptr[Q->front];
+        Q->front = Q->front + 1;
         printf("element dequeued is %d\n", data);
         return data;
     }

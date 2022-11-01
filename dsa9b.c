@@ -80,13 +80,14 @@ void printSparseMatrix(sparse *sparseMatrix)
 
 int main()
 {
-    int arr[5][4] = {{7, 0, 3, 0},
-                     {0, 4, 0, 9},
-                     {-5, 7, 0, 0},
-                     {0, 2, 0, 0},
-                     {12, 0, -2, 0}};
+    int arr[6][5] = {{7, 0, 3, 0,2},
+                     {0, 4, 0, 9,0},
+                     {-5, 7, 0, 0,0},
+                     {0, 2, 0, 0,2},
+                     {12, 0, -2, 0,7},
+                     {9,0,0,3,0}};
 
-    sparse *sparseMatrix = generateSparseMatrix(5, 4, arr);
+    sparse *sparseMatrix = generateSparseMatrix(6, 5, arr);
     printf("Generated Sparse Matrix :\n");
     printSparseMatrix(sparseMatrix);
     return 0;
