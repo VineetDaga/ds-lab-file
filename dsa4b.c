@@ -1,7 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-
 int main(){
     int m,n;
     //m is row capacity
@@ -18,7 +17,7 @@ int main(){
         arr[i]=(int*)malloc(sizeof(int)*col);
     }
     int k =1;
-    printf("INPUT ELEMENT IN THE 2D ARRAY");
+    printf("INPUT ELEMENT IN THE 2D ARRAY\n");
     for(int i=0;i<row;i++){
         for(int j=0;j<col;j++){
             arr[i][j]=k;
@@ -59,7 +58,5 @@ int main(){
         }
         printf("\n");
     }
-
     return 0;
-
 }

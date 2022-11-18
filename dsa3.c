@@ -1,27 +1,30 @@
 #include <stdio.h>
-
-int main(void) {
-    int n, top;
-    printf("Input max array size : ");
-    scanf("%d", &n);
-    int a[n];
-    printf("Input number of array elements : ");
-    scanf("%d", &top);
-    printf("Input array elements : ");
-    for (int i = 0; i < top; i++)
-        scanf("%d", &a[i]);
-    printf("Array elements : ");
-    for (int i = 0; i < top; i++)
-        printf("%d ", a[i]);
-    int mid = top / 2;
-    for (int i = top; i > mid; i--)
-        a[i] = a[i - 1];
-    printf("\nInput the element to be inserted : ");
-    scanf("%d", &a[mid]);
-    top++;
-    printf("Array elements after insertion : ");
-    for (int i = 0; i < top; i++)
-        printf("%d ", a[i]);
+int *insertX(int n, int arr[], int x, int pos)
+{
+    int i;
+    n++;
+    for (i = n; i >= pos; i--)
+        arr[i] = arr[i - 1];
+    arr[pos - 1] = x;
+    return arr;
+}
+int main()
+{
+    int arr[100] = {0};
+    int i, x, pos, n = 10;
+    // initial array of size 10
+    for (i = 0; i < 10; i++)
+        arr[i] = i + 1;
+    for (i = 0; i < n; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+    x = 0;
+    pos = n / 2;
+    insertX(n, arr, x, pos);
+    for (i = 0; i < n + 1; i++)
+        printf("%d ", arr[i]);
     printf("\n");
     return 0;
 }

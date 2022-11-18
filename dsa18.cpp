@@ -8,6 +8,7 @@ class stack{
     // push operation
     void push(int x){
         int n = q.size();
+        cout << x << " is pushed in the stack" << endl;
         q.push(x);
         for (int i = 0; i < n;i++){
             int value = q.front();
@@ -19,6 +20,7 @@ class stack{
     int pop(){
         int value = q.front();
         q.pop();
+        cout << value << " is popped from the stack" << endl;
         return value;
     }
     //accessing top value
@@ -29,6 +31,19 @@ class stack{
     int size(){
         return q.size();
     }
-
-
 };
+
+int main(){
+    stack s;
+    s.push(6);
+    s.pop();
+    s.push(8);
+    s.push(7);
+    s.push(2);
+    cout << "top element: " << s.top() << endl;
+    cout << "size of stack: " << s.size() << endl;
+    s.pop();
+    s.pop();
+    s.pop();
+    s.pop();
+}

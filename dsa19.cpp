@@ -9,6 +9,7 @@ class queue{
 
         //push operation
         void Push(int x){
+            cout << x << " is enqueued in the queue" << endl;
             in.push(x);
         }
 
@@ -22,11 +23,12 @@ class queue{
             }
             int x = out.top();
             out.pop();
+            cout << x << " is dequeued from the queue" << endl;
             return x;
         }
 
         //peek operation
-        int Top(){
+        int fornt(){
             if(out.empty()){
                 while(in.size()){
                     out.push(in.top());
@@ -41,3 +43,17 @@ class queue{
             return in.size() + out.size();
         }
 };
+int main(){
+    queue s;
+    s.Push(6);
+    s.Pop();
+    s.Push(8);
+    s.Push(7);
+    s.Push(2);
+    cout << "top element: " << s.fornt() << endl;
+    cout << "size of queue: " << s.size() << endl;
+    s.Pop();
+    s.Pop();
+    s.Pop();
+    s.Pop();
+}

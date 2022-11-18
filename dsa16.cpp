@@ -67,11 +67,17 @@ int main(){
     node *head = NULL;
     insert(head, 2);
     insert(head, 1);
+    insert(head, 6);
+    insert(head, 9);
+    insert(head, 35);
+    cout << "HEAD -> ";
+    print(head);
     //insert(head, 0);
     node *front = NULL;
     node *back = NULL;
     split(head, front, back);
-    print(head);
+    cout << "FRONT-> ";
     print(front);
+    cout << "BACK -> ";
     print(back);
 }

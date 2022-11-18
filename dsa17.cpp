@@ -56,6 +56,17 @@ void pairs(node* head,int x,node*tail){
     }
 }
 
+void print(node *head){
+    if (head == NULL){
+        return;
+    }
+    node *temp = head;
+    while(temp!=NULL){
+        cout << temp->data << " ";
+        temp = temp->next;
+    }
+    cout << endl;
+}
 int main(){
     node *head = NULL;
     node *tail = NULL;
@@ -69,5 +80,6 @@ int main(){
     insert(head, 7, tail);
     insert(head, 5, tail);
     insert(head, 2, tail);
+    print(head);
     pairs(head, 35, tail);
 }

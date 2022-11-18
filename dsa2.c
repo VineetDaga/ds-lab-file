@@ -1,7 +1,8 @@
 #include <stdio.h>
-#include<stdlib.h>
+#include <stdlib.h>
 
-int binarySearch(int array[], int key, int right_index) {
+int binarySearch(int array[], int key, int right_index)
+{
     int left_index = 0;
     while (left_index <= right_index)
     {
@@ -17,27 +18,21 @@ int binarySearch(int array[], int key, int right_index) {
     return -1;
 }
 
-int main(void) {
-    int size, key;
-    printf("Input the size of sorted array (ascending) : ");
-    scanf("%d", &size);
+int main(void)
+{
+    int arr[10] = {0, 2, 3, 9, 11, 15, 22, 27, 37, 42};
 
-    int *arr = (int *)malloc(sizeof(int) * size);
-
-    printf("Input the %d elements : ", size);
-
-    for (int i = 0; i < size; i++)
-    {
-        scanf("%d", &arr[i]);
-    }
-
-    printf("Element to search for : ");
-    scanf("%d", &key);
-
-    int index = binarySearch(arr, key, size);
+    int index = binarySearch(arr, 22, 10);
     if (index != -1)
         printf("Element found at index %d\n", index);
     else
         printf("Element doesn't exist in the array\n");
+
+    index = binarySearch(arr, 16, 10);
+    if (index != -1)
+        printf("Element found at index %d\n", index);
+    else
+        printf("Element doesn't exist in the array\n");
+
     return 0;
 }

@@ -62,19 +62,20 @@ int dequeue(struct QUEUE*Q){
         return data;
     }
 }
-
+/*
 int main(){
     struct QUEUE *q;
-    q = create(10);
+    q = create(5);
     enqueue(q,5);
     enqueue(q,6);
     enqueue(q,7);
     enqueue(q,8);
     enqueue(q,9);
     enqueue(q,10);
-    enqueue(q,52);
-    enqueue(q,66);
-    enqueue(q,589);
-    enqueue(q,6);
-
-}
+    dequeue(q);
+    dequeue(q);
+    dequeue(q);
+    dequeue(q);
+    dequeue(q);
+    dequeue(q);
+}*/
